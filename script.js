@@ -5,9 +5,10 @@ checkBoxes();
 
 function checkBoxes() {
     const triggerBottom = window.innerHeight/5*4;
-   
+    console.log("window= "+triggerBottom);
     boxes.forEach((box) => {
-        const boxTop = box.getBoundingClientRect.top;
+        const boxTop = box.getBoundingClientRect().top;
+        console.log("box= "+boxTop);
         if (boxTop < triggerBottom) {
             box.classList.add('show');
         }
